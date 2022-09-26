@@ -10,8 +10,9 @@ function download() {
 
 	if [ ! -e $json ]
 	then
+		echo "Downloading $url ..."
 		echo 'var window = {};' >$js
-		wget -q --show-progress -O- "$1" >>$js
+		wget -q --show-progress -O- "$url" >>$js
 		echo 'console.log(JSON.stringify(searchIndex));' >>$js
 		node $js >$json
 		rm $js
@@ -65,7 +66,7 @@ function extract_all() {
 	echo "  morekeywords = [5]{$(extract $json $crate 14 '!')},"
 }
 
-rustver="1.63.0"
+rustver="1.64.0"
 download "https://doc.rust-lang.org/stable/search-index$rustver.js" rust.json
 
 indexmapver="1.9.1"
@@ -94,11 +95,15 @@ echo '\lstdefinelanguage{Rust}{' >>listings-rust.sty
 echo '  morecomment = [l]{//},' >>listings-rust.sty
 echo '  morecomment = [s]{/*}{*/},' >>listings-rust.sty
 echo '  morestring = [b]{"},' >>listings-rust.sty
+echo "  morestring = [b]{'}," >>listings-rust.sty 
 echo '  alsoletter = {!},' >>listings-rust.sty
 echo "  % %%% Rust $rustver Standard Library" >>listings-rust.sty
 echo '  % keywords' >>listings-rust.sty
 echo "  morekeywords = {$(extract rust.json std 21)}," >>listings-rust.sty
+echo "  morekeywords = [5]{macro_rules!}," >>listings-rust.sty 
 extract_all rust.json std >>listings-rust.sty
+echo "  % %%% Rust $rustver proc-macro" >>listings-rust.sty
+extract_all rust.json proc_macro >>listings-rust.sty 
 echo "  % %%% indexmap $indexmapver" >>listings-rust.sty
 extract_all indexmap.json indexmap >>listings-rust.sty
 echo "  % %%% log $logver" >>listings-rust.sty
