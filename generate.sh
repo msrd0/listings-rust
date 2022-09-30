@@ -40,6 +40,8 @@ function extract() {
 	if [ -n "$filter" ]
 	then
 		jq -r ".$crate.n | to_entries | .[] | select($filter) | .value" $json \
+			| sort \
+			| uniq \
 			| sed -z "s|\n|$suffix, |g;s|, \$|\n|"
 	fi
 }
@@ -102,7 +104,7 @@ echo "  morestring = [b]{'}," >>listings-rust.sty
 echo '  alsoletter = {!},' >>listings-rust.sty
 echo "  % %%% Rust $rustver Standard Library" >>listings-rust.sty
 echo '  % keywords' >>listings-rust.sty
-echo "  morekeywords = {$(extract rust.json std 21)}," >>listings-rust.sty
+echo "  morekeywords = {$(extract rust.json std 21 | sed 's,SelfTy,Self,g')}," >>listings-rust.sty
 echo "  morekeywords = [5]{macro_rules!}," >>listings-rust.sty 
 extract_all rust.json std >>listings-rust.sty
 echo "  % %%% Rust $rustver proc-macro" >>listings-rust.sty
