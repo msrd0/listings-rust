@@ -64,6 +64,8 @@ function extract_all() {
 	echo "  morekeywords = [4]{$(extract $json $crate 6)},"
 	echo '  % unions'
 	echo "  morekeywords = [4]{$(extract $json $crate 19)},"
+	echo '  % variants'
+	echo "  morekeywords = [5]{$(extract $json $crate 13)},"
 	echo '  % macros'
 	echo "  morekeywords = [5]{$(extract $json $crate 14 '!')},"
 }
@@ -100,7 +102,6 @@ echo '\lstdefinelanguage{Rust}{' >>listings-rust.sty
 echo '  morecomment = [l]{//},' >>listings-rust.sty
 echo '  morecomment = [s]{/*}{*/},' >>listings-rust.sty
 echo '  morestring = [b]{"},' >>listings-rust.sty
-echo "  morestring = [b]{'}," >>listings-rust.sty 
 echo '  alsoletter = {!},' >>listings-rust.sty
 echo "  % %%% Rust $rustver Standard Library" >>listings-rust.sty
 echo '  % keywords' >>listings-rust.sty

@@ -25,6 +25,8 @@
   morekeywords = [4]{blkcnt_t, blksize_t, c_char, c_double, c_float, c_int, c_long, c_longlong, c_schar, c_short, c_uchar, c_uint, c_ulong, c_ulonglong, c_ushort, c_void, dev_t, f32x16, f32x2, f32x4, f32x8, f64x2, f64x4, f64x8, gid_t, HANDLE, i16x16, i16x2, i16x32, i16x4, i16x8, i32x16, i32x2, i32x4, i32x8, i64x2, i64x4, i64x8, i8x16, i8x32, i8x4, i8x64, i8x8, ino_t, isizex2, isizex4, isizex8, LayoutErr, LockResult, mask16x16, mask16x32, mask16x4, mask16x8, mask32x16, mask32x2, mask32x4, mask32x8, mask64x2, mask64x4, mask64x8, mask8x16, mask8x32, mask8x64, mask8x8, masksizex2, masksizex4, masksizex8, mode_t, nlink_t, off_t, ParseError, pid_t, pthread_t, RawFd, RawHandle, RawPthread, RawSocket, Result, SOCKET, time_t, TryLockResult, u16x16, u16x2, u16x32, u16x4, u16x8, u32x16, u32x2, u32x4, u32x8, u64x2, u64x4, u64x8, u8x16, u8x32, u8x4, u8x64, u8x8, uid_t, usizex2, usizex4, usizex8},
   % unions
   morekeywords = [4]{MaybeUninit},
+  % variants
+  morekeywords = [5]{AcqRel, Acquire, AddrInUse, AddrNotAvailable, AdminLocal, AllocError, AlreadyExists, ArgumentListTooLong, Borrowed, Both, Break, BrokenPipe, CapacityOverflow, Captured, Center, Complete, ConnectionAborted, ConnectionRefused, ConnectionReset, Continue, CrossesDevices, CurDir, Current, Deadlock, DeviceNS, DirectoryNotEmpty, Disabled, Disconnected, Disk, Done, Empty, End, Equal, Err, Excluded, ExecutableFileBusy, FilesystemLoop, FilesystemQuotaExceeded, FileTooLarge, First, Full, Global, Greater, HostUnreachable, Included, Infinite, InterfaceLocal, Interrupted, InvalidData, InvalidDigit, InvalidFilename, InvalidInput, IsADirectory, Left, Less, LinkLocal, Match, Nan, NegOverflow, NetworkDown, NetworkUnreachable, None, Normal, NotADirectory, NotConnected, NotFound, NotPresent, NotSeekable, NotUnicode, Occupied, Off, Ok, OrganizationLocal, Other, OutOfMemory, Owned, ParentDir, Pending, PermissionDenied, Poisoned, PosOverflow, Prefix, Read, ReadOnlyFilesystem, Ready, RealmLocal, Reject, Relaxed, Release, ResourceBusy, Right, RootDir, ScmCredentials, ScmRights, Second, SeqCst, Short, SiteLocal, Some, StaleNetworkFileHandle, Start, StorageFull, Subnormal, TimedOut, Timeout, TooManyLinks, Unbounded, UNC, UnexpectedEof, Unknown, Unsupported, V4, V6, Vacant, Verbatim, VerbatimDisk, VerbatimUNC, WouldBlock, Write, WriteZero, Yielded, Zero},
   % macros
   morekeywords = [5]{addr_of!, addr_of_mut!, assert!, assert_eq!, assert_matches!, assert_ne!, bench!, cfg!, cfg_accessible!, cfg_eval!, Clone!, column!, compile_error!, concat!, concat_bytes!, concat_idents!, const_format_args!, Copy!, dbg!, Debug!, debug_assert!, debug_assert_eq!, debug_assert_matches!, debug_assert_ne!, Default!, derive!, env!, eprint!, eprintln!, Eq!, file!, format!, format_args!, format_args_nl!, global_allocator!, Hash!, include!, include_bytes!, include_str!, is_aarch64_feature_detected!, is_arm_feature_detected!, is_mips64_feature_detected!, is_mips_feature_detected!, is_powerpc64_feature_detected!, is_powerpc_feature_detected!, is_riscv_feature_detected!, is_x86_feature_detected!, join!, line!, log_syntax!, matches!, module_path!, option_env!, Ord!, panic!, PartialEq!, PartialOrd!, pin!, print!, println!, ready!, simd_swizzle!, stringify!, test!, test_case!, thread_local!, todo!, trace_macros!, try!, unimplemented!, unreachable!, vec!, write!, writeln!},
   % %%% Rust 1.64.0 proc-macro
@@ -40,6 +42,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{Alone, Brace, Bracket, Error, Group, Help, Ident, Joint, Literal, None, Note, Parenthesis, Punct, Warning},
   % macros
   morekeywords = [5]{quote!},
   % %%% indexmap 1.9.1
@@ -55,6 +59,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{Occupied, Vacant},
   % macros
   morekeywords = [5]{indexmap!, indexset!},
   % %%% log 0.4.17
@@ -70,6 +76,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{Debug, Error, Info, Off, Trace, Warn},
   % macros
   morekeywords = [5]{as_debug!, as_display!, as_error!, as_serde!, as_sval!, debug!, error!, info!, log!, log_enabled!, trace!, warn!},
   % %%% num-integer 0.1.45
@@ -85,6 +93,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{},
   % macros
   morekeywords = [5]{},
   % %%% paste 1.0.9
@@ -100,6 +110,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{},
   % macros
   morekeywords = [5]{paste!},
   % %%% rand 0.8.5
@@ -115,6 +127,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{AllWeightsZero, InvalidProbability, InvalidWeight, NoItem, TooMany},
   % macros
   morekeywords = [5]{},
   % %%% rayon 1.5.3
@@ -130,6 +144,8 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % variants
+  morekeywords = [5]{Left, Right},
   % macros
   morekeywords = [5]{},
 }
