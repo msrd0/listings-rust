@@ -64,8 +64,6 @@ function extract_all() {
 	echo "  morekeywords = [4]{$(extract $json $crate 6)},"
 	echo '  % unions'
 	echo "  morekeywords = [4]{$(extract $json $crate 19)},"
-	echo '  % variants'
-	echo "  morekeywords = [5]{$(extract $json $crate 13)},"
 	echo '  % macros'
 	echo "  morekeywords = [5]{$(extract $json $crate 14 '!')},"
 }
@@ -106,7 +104,9 @@ echo '  alsoletter = {!},' >>listings-rust.sty
 echo "  % %%% Rust $rustver Standard Library" >>listings-rust.sty
 echo '  % keywords' >>listings-rust.sty
 echo "  morekeywords = {$(extract rust.json std 21 | sed 's,SelfTy,Self,g')}," >>listings-rust.sty
-echo "  morekeywords = [5]{macro_rules!}," >>listings-rust.sty 
+echo '  morekeywords = [5]{macro_rules!},' >>listings-rust.sty
+echo '  % some important variants' >>listings-rust.sty
+echo '  morekeywords = [5]{Some, None, Ok, Err, Borrowed, Owned, Left, Right},' >>listings-rust.sty 
 extract_all rust.json std >>listings-rust.sty
 echo "  % %%% Rust $rustver proc-macro" >>listings-rust.sty
 extract_all rust.json proc_macro >>listings-rust.sty 
