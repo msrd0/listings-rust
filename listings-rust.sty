@@ -27,8 +27,13 @@
   morekeywords = [4]{blkcnt_t, blksize_t, c_char, c_double, c_float, c_int, c_long, c_longlong, c_schar, c_short, c_uchar, c_uint, c_ulong, c_ulonglong, c_ushort, c_void, dev_t, f32x16, f32x2, f32x4, f32x8, f64x2, f64x4, f64x8, gid_t, HANDLE, i16x16, i16x2, i16x32, i16x4, i16x8, i32x16, i32x2, i32x4, i32x8, i64x2, i64x4, i64x8, i8x16, i8x32, i8x4, i8x64, i8x8, ino_t, isizex2, isizex4, isizex8, LayoutErr, LockResult, mask16x16, mask16x32, mask16x4, mask16x8, mask32x16, mask32x2, mask32x4, mask32x8, mask64x2, mask64x4, mask64x8, mask8x16, mask8x32, mask8x64, mask8x8, masksizex2, masksizex4, masksizex8, mode_t, nlink_t, off_t, ParseError, pid_t, pthread_t, RawFd, RawHandle, RawPthread, RawSocket, Result, SOCKET, time_t, TryLockResult, u16x16, u16x2, u16x32, u16x4, u16x8, u32x16, u32x2, u32x4, u32x8, u64x2, u64x4, u64x8, u8x16, u8x32, u8x4, u8x64, u8x8, uid_t, usizex2, usizex4, usizex8},
   % unions
   morekeywords = [4]{MaybeUninit},
+  % functions
+  morekeywords = [5]{abort, absolute, add_with_overflow, align_of, align_of_val, align_of_val_raw, alloc, alloc_zeroed, always_abort, args, args_os, arith_offset, assert_inhabited, assert_uninit_valid, assert_zero_valid, assume, atomic_and_acqrel, atomic_and_acquire, atomic_and_relaxed, atomic_and_release, atomic_and_seqcst, atomic_cxchg, atomic_cxchg_acq, atomic_cxchg_acq_failrelaxed, atomic_cxchg_acqrel, atomic_cxchg_acqrel_acquire, atomic_cxchg_acqrel_failrelaxed, atomic_cxchg_acqrel_relaxed, atomic_cxchg_acqrel_seqcst, atomic_cxchg_acquire_acquire, atomic_cxchg_acquire_relaxed, atomic_cxchg_acquire_seqcst, atomic_cxchg_failacq, atomic_cxchg_failrelaxed, atomic_cxchg_rel, atomic_cxchg_relaxed, atomic_cxchg_relaxed_acquire, atomic_cxchg_relaxed_relaxed, atomic_cxchg_relaxed_seqcst, atomic_cxchg_release_acquire, atomic_cxchg_release_relaxed, atomic_cxchg_release_seqcst, atomic_cxchg_seqcst_acquire, atomic_cxchg_seqcst_relaxed, atomic_cxchg_seqcst_seqcst, atomic_cxchgweak_acqrel_acquire, atomic_cxchgweak_acqrel_relaxed, atomic_cxchgweak_acqrel_seqcst, atomic_cxchgweak_acquire_acquire, atomic_cxchgweak_acquire_relaxed, atomic_cxchgweak_acquire_seqcst, atomic_cxchgweak_relaxed_acquire, atomic_cxchgweak_relaxed_relaxed, atomic_cxchgweak_relaxed_seqcst, atomic_cxchgweak_release_acquire, atomic_cxchgweak_release_relaxed, atomic_cxchgweak_release_seqcst, atomic_cxchgweak_seqcst_acquire, atomic_cxchgweak_seqcst_relaxed, atomic_cxchgweak_seqcst_seqcst, atomic_fence_acqrel, atomic_fence_acquire, atomic_fence_release, atomic_fence_seqcst, atomic_load_acquire, atomic_load_relaxed, atomic_load_seqcst, atomic_load_unordered, atomic_max_acqrel, atomic_max_acquire, atomic_max_relaxed, atomic_max_release, atomic_max_seqcst, atomic_min_acqrel, atomic_min_acquire, atomic_min_relaxed, atomic_min_release, atomic_min_seqcst, atomic_nand_acqrel, atomic_nand_acquire, atomic_nand_relaxed, atomic_nand_release, atomic_nand_seqcst, atomic_or_acqrel, atomic_or_acquire, atomic_or_relaxed, atomic_or_release, atomic_or_seqcst, atomic_singlethreadfence_acqrel, atomic_singlethreadfence_acquire, atomic_singlethreadfence_release, atomic_singlethreadfence_seqcst, atomic_store, atomic_store_relaxed, atomic_store_release, atomic_store_seqcst, atomic_store_unordered, atomic_umax_acqrel, atomic_umax_acquire, atomic_umax_relaxed, atomic_umax_release, atomic_umax_seqcst, atomic_umin_acqrel, atomic_umin_acquire, atomic_umin_relaxed, atomic_umin_release, atomic_umin_seqcst, atomic_xadd_acqrel, atomic_xadd_acquire, atomic_xadd_relaxed, atomic_xadd_release, atomic_xadd_seqcst, atomic_xchg_acqrel, atomic_xchg_acquire, atomic_xchg_relaxed, atomic_xchg_release, atomic_xchg_seqcst, atomic_xor_acqrel, atomic_xor_acquire, atomic_xor_relaxed, atomic_xor_release, atomic_xor_seqcst, atomic_xsub_acqrel, atomic_xsub_acquire, atomic_xsub_relaxed, atomic_xsub_release, atomic_xsub_seqcst, available_parallelism, bitreverse, black_box, breakpoint, bswap, caller_location, canonicalize, catch_unwind, ceilf32, ceilf64, channel, chown, chroot, compiler_fence, const_allocate, const_deallocate, const_eval_select, const_eval_select_ct, copy, copy_nonoverlapping, copysignf32, copysignf64, cosf32, cosf64, create_dir, create_dir_all, ctlz, ctlz_nonzero, ctpop, cttz, cttz_nonzero, current, current_dir, current_exe, dealloc, decode_utf16, default, discriminant, discriminant_value, drop, drop_in_place, empty, eq, escape_default, exact_div, exit, exp2f32, exp2f64, expf32, expf64, fabsf32, fabsf64, fadd_fast, fchown, fdiv_fast, fence, float_to_int_unchecked, floorf32, floorf64, fmaf32, fmaf64, fmul_fast, forget, forget_unsized, format, frem_fast, from_boxed_utf8_unchecked, from_digit, from_exposed_addr, from_exposed_addr_mut, from_fn, from_generator, from_iter, from_mut, from_mut_ptr_range, from_ptr_range, from_raw_parts, from_raw_parts_mut, from_ref, from_u32, from_u32_unchecked, from_utf8, from_utf8_mut, from_utf8_unchecked, from_utf8_unchecked_mut, fsub_fast, get_backtrace_style, handle_alloc_error, hard_link, hash, home_dir, id, identity, invalid, invalid_mut, is_separator, join_paths, lchown, likely, link, log10f32, log10f64, log2f32, log2f64, logf32, logf64, max, max_by, max_by_key, maxnumf32, maxnumf64, metadata, min, min_align_of, min_align_of_val, min_by, min_by_key, minnumf32, minnumf64, mul_with_overflow, must_use, nearbyintf32, nearbyintf64, needs_drop, nontemporal_store, null, null_mut, offset, once, once_with, panic_any, panicking, parent_id, park, park_timeout, park_timeout_ms, peer_cred, pending, poll_fn, powf32, powf64, powif32, powif64, pref_align_of, prefetch_read_data, prefetch_read_instruction, prefetch_write_data, prefetch_write_instruction, ptr_guaranteed_eq, ptr_guaranteed_ne, ptr_offset_from, ptr_offset_from_unsigned, range, raw_eq, read, read_dir, read_link, read_to_string, read_unaligned, read_volatile, ready, realloc, remove_dir, remove_dir_all, remove_file, remove_var, rename, repeat, repeat_with, replace, request_ref, request_value, resume_unwind, rintf32, rintf64, rotate_left, rotate_right, roundf32, roundf64, rustc_peek, saturating_add, saturating_sub, scope, set_alloc_error_hook, set_backtrace_style, set_current_dir, set_hook, set_permissions, set_var, sinf32, sinf64, sink, size_of, size_of_val, size_of_val_raw, sleep, sleep_ms, slice_from_raw_parts, slice_from_raw_parts_mut, soft_link, spawn, spin_loop, spin_loop_hint, split_paths, sqrtf32, sqrtf64, stderr, stdin, stdout, sub_with_overflow, successors, swap, swap_nonoverlapping, symlink, symlink_dir, symlink_file, symlink_metadata, symlink_path, sync_channel, take, take_alloc_error_hook, take_hook, temp_dir, transmute, transmute_copy, truncf32, truncf64, try, try_exists, try_from_fn, type_id, type_name, type_name_of_val, unaligned_volatile_load, unaligned_volatile_store, unchecked_add, unchecked_div, unchecked_mul, unchecked_rem, unchecked_shl, unchecked_shr, unchecked_sub, uninitialized, unlikely, unreachable, unreachable_unchecked, update_hook, var, variant_count, var_os, vars, vars_os, volatile_copy_memory, volatile_copy_nonoverlapping_memory, volatile_load, volatile_set_memory, volatile_store, vtable_align, vtable_size, wrapping_add, wrapping_mul, wrapping_sub, write, write_bytes, write_unaligned, write_volatile, yield_now, zeroed, zip},
   % macros
   morekeywords = [5]{addr_of!, addr_of_mut!, assert!, assert_eq!, assert_matches!, assert_ne!, bench!, cfg!, cfg_accessible!, cfg_eval!, Clone!, column!, compile_error!, concat!, concat_bytes!, concat_idents!, const_format_args!, Copy!, dbg!, Debug!, debug_assert!, debug_assert_eq!, debug_assert_matches!, debug_assert_ne!, Default!, derive!, env!, eprint!, eprintln!, Eq!, file!, format!, format_args!, format_args_nl!, global_allocator!, Hash!, include!, include_bytes!, include_str!, is_aarch64_feature_detected!, is_arm_feature_detected!, is_mips64_feature_detected!, is_mips_feature_detected!, is_powerpc64_feature_detected!, is_powerpc_feature_detected!, is_riscv_feature_detected!, is_x86_feature_detected!, join!, line!, log_syntax!, matches!, module_path!, option_env!, Ord!, panic!, PartialEq!, PartialOrd!, pin!, print!, println!, ready!, simd_swizzle!, stringify!, test!, test_case!, thread_local!, todo!, trace_macros!, try!, unimplemented!, unreachable!, vec!, write!, writeln!},
+  % constants
+  morekeywords = [5]{ARCH, ATOMIC_BOOL_INIT, ATOMIC_I16_INIT, ATOMIC_I32_INIT, ATOMIC_I64_INIT, ATOMIC_I8_INIT, ATOMIC_ISIZE_INIT, ATOMIC_U16_INIT, ATOMIC_U32_INIT, ATOMIC_U64_INIT, ATOMIC_U8_INIT, ATOMIC_USIZE_INIT, DIGITS, DLL_EXTENSION, DLL_PREFIX, DLL_SUFFIX, E, EPSILON, EXE_EXTENSION, EXE_SUFFIX, FAMILY, FRAC_1_PI, FRAC_1_SQRT_2, FRAC_2_PI, FRAC_2_SQRT_PI, FRAC_PI_2, FRAC_PI_3, FRAC_PI_4, FRAC_PI_6, FRAC_PI_8, INFINITY, LN_10, LN_2, LOG10_2, LOG10_E, LOG2_10, LOG2_E, MAIN_SEPARATOR, MAIN_SEPARATOR_STR, MANTISSA_DIGITS, MAX, MAX_10_EXP, MAX_EXP, MIN, MIN_10_EXP, MIN_EXP, MIN_POSITIVE, NAN, NEG_INFINITY, ONCE_INIT, OS, PI, RADIX, REPLACEMENT_CHARACTER, SQRT_2, TAU, UNICODE_VERSION, UNIX_EPOCH},
+  morekeywords = [5]{BITMASK_LEN, BITS, BREAK, BROADCAST, CONTINUE, DIGITS, EPSILON, FAILURE, INDEX, INFINITY, LANES, LOCALHOST, MANTISSA_DIGITS, MAX, MAX_10_EXP, MAX_EXP, MICROSECOND, MILLISECOND, MIN, MIN_10_EXP, MIN_EXP, MIN_POSITIVE, NAN, NANOSECOND, NEG_INFINITY, RADIX, REPLACEMENT_CHARACTER, SECOND, SUCCESS, UNICODE_VERSION, UNIX_EPOCH, UNSPECIFIED, ZERO},
   % %%% Rust 1.64.0 proc-macro
   % traits
   morekeywords = [2]{MultiSpan},
@@ -42,8 +47,13 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{is_available, path, quote, quote_span, var},
   % macros
   morekeywords = [5]{quote!},
+  % constants
+  morekeywords = [5]{},
+  morekeywords = [5]{},
   % %%% indexmap 1.9.1
   % traits
   morekeywords = [2]{Equivalent, MutableKeys},
@@ -57,8 +67,13 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{deserialize, serialize},
   % macros
   morekeywords = [5]{indexmap!, indexset!},
+  % constants
+  morekeywords = [5]{},
+  morekeywords = [5]{},
   % %%% log 0.4.17
   % traits
   morekeywords = [2]{Log, Source, ToKey, ToValue, Visit, Visitor},
@@ -72,8 +87,13 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{as_list, as_map, logger, max_level, serialize, set_boxed_logger, set_logger, set_logger_racy, set_max_level},
   % macros
   morekeywords = [5]{as_debug!, as_display!, as_error!, as_serde!, as_sval!, debug!, error!, info!, log!, log_enabled!, trace!, warn!},
+  % constants
+  morekeywords = [5]{STATIC_MAX_LEVEL},
+  morekeywords = [5]{},
   % %%% num-integer 0.1.45
   % traits
   morekeywords = [2]{Average, Integer, Roots},
@@ -87,7 +107,12 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{average_ceil, average_floor, binomial, cbrt, div_ceil, div_floor, div_mod_floor, div_rem, gcd, gcd_lcm, lcm, mod_floor, multinomial, nth_root, sqrt},
   % macros
+  morekeywords = [5]{},
+  % constants
+  morekeywords = [5]{},
   morekeywords = [5]{},
   % %%% paste 1.0.9
   % traits
@@ -102,8 +127,13 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{},
   % macros
   morekeywords = [5]{paste!},
+  % constants
+  morekeywords = [5]{},
+  morekeywords = [5]{},
   % %%% rand 0.8.5
   % traits
   morekeywords = [2]{CryptoRng, Distribution, DistString, Fill, IteratorRandom, Rng, RngCore, SampleBorrow, SampleRange, SampleUniform, SeedableRng, SliceRandom, UniformSampler, Weight},
@@ -117,8 +147,13 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{random, sample, sample_weighted, thread_rng},
   % macros
   morekeywords = [5]{},
+  % constants
+  morekeywords = [5]{},
+  morekeywords = [5]{CUSTOM_START, INTERNAL_START},
   % %%% rayon 1.5.3
   % traits
   morekeywords = [2]{Consumer, Folder, FromParallelIterator, IndexedParallelIterator, IntoParallelIterator, IntoParallelRefIterator, IntoParallelRefMutIterator, ParallelBridge, ParallelDrainFull, ParallelDrainRange, ParallelExtend, ParallelIterator, ParallelSlice, ParallelSliceMut, ParallelString, Producer, ProducerCallback, Reducer, UnindexedConsumer, UnindexedProducer},
@@ -132,6 +167,11 @@
   morekeywords = [4]{},
   % unions
   morekeywords = [4]{},
+  % functions
+  morekeywords = [5]{bridge, bridge_producer_consumer, bridge_unindexed, current_num_threads, current_thread_index, empty, in_place_scope, in_place_scope_fifo, join, join_context, max_num_threads, once, repeat, repeatn, scope, scope_fifo, spawn, spawn_fifo, split},
   % macros
+  morekeywords = [5]{},
+  % constants
+  morekeywords = [5]{},
   morekeywords = [5]{},
 }

@@ -64,8 +64,13 @@ function extract_all() {
 	echo "  morekeywords = [4]{$(extract $json $crate 6)},"
 	echo '  % unions'
 	echo "  morekeywords = [4]{$(extract $json $crate 19)},"
+	echo '  % functions'
+	echo "  morekeywords = [5]{$(extract $json $crate 5)},"
 	echo '  % macros'
 	echo "  morekeywords = [5]{$(extract $json $crate 14 '!')},"
+	echo '  % constants'
+	echo "  morekeywords = [5]{$(extract $json $crate 17)},"
+	echo "  morekeywords = [5]{$(extract $json $crate 18)},"
 }
 
 rustver="1.64.0"
