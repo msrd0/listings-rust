@@ -84,6 +84,9 @@ download "https://docs.rs/paste/$pastever/search-index-20220830-1.65.0-nightly-0
 randver="0.8.5"
 download "https://docs.rs/rand/$randver/search-index-20220213-1.60.0-nightly-1e12aef3f.js" rand.json
 
+rayonver="1.5.3"
+download "https://docs.rs/rayon/$rayonver/search-index-20220512-1.62.0-nightly-a5ad0d29a.js" rayon.json
+
 # prepare file
 echo '\NeedsTeXFormat{LaTeX2e}[1994/06/01]' >listings-rust.sty
 echo '\ProvidesPackage{listings-rust}[2022/09/21 Custom Package]' >>listings-rust.sty
@@ -114,4 +117,6 @@ echo "  % %%% paste $pastever" >>listings-rust.sty
 extract_all paste.json paste >>listings-rust.sty
 echo "  % %%% rand $randver" >>listings-rust.sty
 extract_all rand.json rand >>listings-rust.sty
+echo "  % %%% rayon $rayonver" >>listings-rust.sty
+extract_all rayon.json rayon >>listings-rust.sty
 echo '}' >>listings-rust.sty
